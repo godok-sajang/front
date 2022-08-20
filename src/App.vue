@@ -1,30 +1,42 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <HeaderComponent />
+  <router-view class="router-view" />
 </template>
+
+<script>
+import HeaderComponent from './components/layout/HeaderComponent.vue'
+export default {
+  components: { HeaderComponent },
+}
+</script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: Noto Sans KR, sans-serif, BMYeonSung;
 }
 
-nav {
-  padding: 30px;
+html {
+  height: 100%;
+  color: #000000;
+  line-height: 1.4;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+input, button, textarea { font-family: inherit }
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+ol, ul, li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'BMYeonSung';
+  src: local('BMYeonSung'),
+  url('@/assets/font/BMYeonSung.ttf') format("truetype"),
+  url('@/assets/font/BMYeonSung.otf') format("opentype"),;
+}
+
+.router-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
