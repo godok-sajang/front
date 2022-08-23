@@ -11,14 +11,27 @@ export default {
 </script>
 
 <style lang="scss">
+* {
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Noto Sans KR, sans-serif, BMYeonSung;
 }
 
 html {
-  height: 100%;
   color: #000000;
   line-height: 1.4;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 input, button, textarea { font-family: inherit }

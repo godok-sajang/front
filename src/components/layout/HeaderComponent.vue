@@ -12,11 +12,13 @@ export default {
 </script>
 <style lang="scss">
 .header{
+  position: absolute;
   display: flex;
   justify-content: space-between;
 }
 
 .header__logo {
+  margin: 1.75rem;
   font: {
     family: 'BMYeonSung';
     size: 2rem;
